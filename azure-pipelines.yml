@@ -39,14 +39,14 @@ steps:
     platform: '$(buildPlatform)'
     configuration: '$(buildConfiguration)'
 
-- task: DotNetCoreCLI@2
-  displayName: 'dotnet publish --configuration $(buildConfiguration) --output $(Build.ArtifactStagingDirectory)'
-  inputs:
-    command: publish
-    publishWebProject: false
-    projects: 'AzureDevopsProject/azureDevops/azureDevops.csproj'
-    arguments: '--configuration $(buildConfiguration) --output $(Build.ArtifactStagingDirectory)'
-    zipAfterPublish: true
+# - task: DotNetCoreCLI@2
+#   displayName: 'dotnet publish --configuration $(buildConfiguration) --output $(Build.ArtifactStagingDirectory)'
+#   inputs:
+#     command: publish
+#     publishWebProject: false
+#     projects: 'AzureDevopsProject/azureDevops/azureDevops.csproj'
+#     arguments: '--configuration $(buildConfiguration) --output $(Build.ArtifactStagingDirectory)'
+#     zipAfterPublish: true
 
-- task: PublishBuildArtifacts@1
-  displayName: 'publish artifacts'
+# - task: PublishBuildArtifacts@1
+#   displayName: 'publish artifacts'
